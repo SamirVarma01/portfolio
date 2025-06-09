@@ -1,25 +1,3 @@
 # Gaming portfolio website
 
-## Overview
-
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
-
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/samir-varmas-projects/v0-gaming-portfolio-website](https://vercel.com/samir-varmas-projects/v0-gaming-portfolio-website)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/PKreebuWbuK](https://v0.dev/chat/projects/PKreebuWbuK)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Portfolio website all about me! Here you can find information about my experience, projects, and interests. Feel free to get in touch at sv773@scarletmail.rutgers.edu
