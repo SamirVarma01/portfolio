@@ -56,13 +56,14 @@ export default function SkillsSection() {
       icon: "🛠️",
     },
     {
-      name: "DevOps & Cloud",
+      name: "DevOps, Databases & Cloud",
       skills: [
         "Git",
         "GitHub",
         "GitLab",
         "Amazon Web Services",
         "Google Cloud Platform",
+        "Azure DataBricks",
         "Docker",
         "MongoDB",
         "PostgreSQL",
