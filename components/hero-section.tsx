@@ -53,22 +53,22 @@ export default function HeroSection() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
               <span className="bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text font-semibold">
-                Software Engineer | Data Scientist | Game Enthusiast
+              Leveling Up Through Code, One Project at a Time
               </span>
             </p>
 
             <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
               <div className="bg-gradient-to-br from-red-500 to-red-700 p-4 rounded-lg pixel-borders">
-                <p className="text-xs md:text-sm font-bold text-white">Pokémon</p>
-                <p className="text-xs text-white/80">Trainer</p>
+                <p className="text-xs md:text-sm font-bold text-white">Full-Stack</p>
+                <p className="text-xs text-white/80">Developer</p>
               </div>
               <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-lg pixel-borders">
-                <p className="text-xs md:text-sm font-bold text-white">Jujutsu</p>
-                <p className="text-xs text-white/80">Sorcerer</p>
+                <p className="text-xs md:text-sm font-bold text-white">AI/ML</p>
+                <p className="text-xs text-white/80">Researcher</p>
               </div>
               <div className="bg-gradient-to-br from-amber-500 to-amber-700 p-4 rounded-lg pixel-borders">
-                <p className="text-xs md:text-sm font-bold text-white">Guitar</p>
-                <p className="text-xs text-white/80">Player</p>
+                <p className="text-xs md:text-sm font-bold text-white">Physics</p>
+                <p className="text-xs text-white/80">Enthusiast</p>
               </div>
             </div>
           </motion.div>
