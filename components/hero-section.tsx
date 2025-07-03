@@ -32,14 +32,14 @@ export default function HeroSection() {
     <div className="relative z-10 text-center">
       <div className="relative inline-block">
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} className="mb-8">
-          <div className="w-32 h-32 md:w-40 md:h-40 mx-auto relative">
+        <div className="w-60 h-60 md:w-60 md:h-60 mx-auto relative flex items-center justify-center">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 animate-pulse"></div>
             <Image
-              src="/myphoto.png?height=160&width=160"
+              src="/myphoto.png"
               alt="Samir Varma"
               width={160}
               height={160}
-              className="rounded-full border-4 border-white dark:border-gray-800 object-cover relative z-10"
+              className="rounded-full border-4 border-white dark:border-gray-800 object-cover object-[50%_40%] w-full h-full relative z-10"
             />
           </div>
         </motion.div>

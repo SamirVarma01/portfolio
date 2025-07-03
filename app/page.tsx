@@ -71,7 +71,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="flex justify-center my-8"
+          className="flex justify-center my-1"
         >
           <Button
             onClick={() => scrollToSection("about")}
@@ -99,21 +99,11 @@ export default function Home() {
               <Card className="p-6 game-card bg-gradient-to-br from-purple-900/80 to-purple-700/80 backdrop-blur-sm border-2 border-purple-500">
                 <h3 className="text-xl font-bold mb-4 pixel-text">About Me</h3>
                 <p className="mb-4">
-                  I'm Samir Varma, a Computer Engineering and Mathematics student at Rutgers University with a passion
-                  for software development, machine learning, and data science. When I'm not coding, you can find me
-                  playing guitar, battling Pokémon, or watching Jujutsu Kaisen.
+                  Hi! I'm Samir, a rising junior at the Rutgers University Honors College studying Computer Engineering and Mathematics with a Physics minor. 
+                  I'm enthralled by the integration of machine learning in all kinds of technologies, ranging from full-stack applications to video game bots and self-driving cars! 
+                  Beyond my technical interests, my hobbies include playing guitar, watching anime, going to the gym, and playing video games. 
+                  In my free time, you can probably find me rambling on about Satoru Gojo, grinding Pokemon Showdown, or playing Resident Evil.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <Badge variant="outline" className="bg-[hsl(var(--pokemon-red))] text-white">
-                    Pokémon Fan
-                  </Badge>
-                  <Badge variant="outline" className="bg-[hsl(var(--jjk-blue))] text-white">
-                    Jujutsu Kaisen
-                  </Badge>
-                  <Badge variant="outline" className="bg-[hsl(var(--guitar-brown))] text-white">
-                    Guitar Player
-                  </Badge>
-                </div>
               </Card>
 
               <Card className="p-6 game-card bg-gradient-to-br from-blue-900/80 to-blue-700/80 backdrop-blur-sm border-2 border-blue-500">
@@ -125,18 +115,26 @@ export default function Home() {
                   </li>
                   <li className="flex justify-between">
                     <span>Education:</span>
-                    <span>Rutgers University</span>
+                    <span>Rutgers University, New Brunswick - Honors College</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Major:</span>
                     <span>Computer Engineering, Mathematics</span>
                   </li>
                   <li className="flex justify-between">
+                    <span>Minor:</span>
+                    <span>Physics</span>
+                  </li>
+                  <li className="flex justify-between">
                     <span>GPA:</span>
                     <span>3.956/4.000</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Graduation:</span>
+                    <span>Start Date:</span>
+                    <span>August 2023</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Expected Graduation:</span>
                     <span>May 2027</span>
                   </li>
                 </ul>
