@@ -25,7 +25,6 @@ export default function ExperienceSection() {
         "GitLab",
       ],
       color: "from-blue-600 to-blue-800",
-      icon: "🔍",
     },
     {
       title: "Software Engineering Intern",
@@ -36,7 +35,6 @@ export default function ExperienceSection() {
         "Collaborated with ex-Google DeepMind engineers to develop and optimize convolutional neural network models for automating several image editing tasks, such as large object removal, facial expression altering, and red-eye removal, reducing error rates by 25%",
       skills: ["Python", "PyTorch", "OpenCV", "Flask", "BeautifulSoup", "Docker", "Git", "Google Cloud Platform"],
       color: "from-purple-600 to-purple-800",
-      icon: "🚀",
     },
     {
       title: "Machine Learning Researcher",
@@ -47,7 +45,6 @@ export default function ExperienceSection() {
         "Integrated a multi-agent reinforcement learning algorithm into the CARLA autonomous driving simulator to enhance real-time decision-making capabilities for autonomous vehicles using Actor-Critic neural networks implemented in TensorFlow",
       skills: ["Python", "TensorFlow", "TensorBoard", "Pandas", "Matplotlib", "Git", "Linux"],
       color: "from-red-600 to-red-800",
-      icon: "🧠",
     },
     {
       title: "Data Analyst",
@@ -58,7 +55,6 @@ export default function ExperienceSection() {
         "Utilized SQL to query dataset of 300+ lunar rover components, improving power efficiency by 44% and reducing costs by 32%",
       skills: ["SQL", "Google BigQuery", "Power BI"],
       color: "from-indigo-600 to-indigo-800",
-      icon: "🚀",
     },
   ]
 
