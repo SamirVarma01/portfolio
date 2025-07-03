@@ -1,8 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Briefcase, Calendar, MapPin } from "lucide-react"
+import { Briefcase, Calendar, MapPin, Code2 } from "lucide-react"
 
 export default function ExperienceSection() {
   const experiences = [
@@ -123,14 +122,33 @@ export default function ExperienceSection() {
                 </div>
               </div>
 
-              <p className="mb-4">{exp.description}</p>
+              <p className="mb-6">{exp.description}</p>
 
-              <div className="flex flex-wrap gap-2">
-                {exp.skills.map((skill) => (
-                  <Badge key={skill} variant="outline" className="bg-black/30 border-white/30">
-                    {skill}
-                  </Badge>
-                ))}
+              {/* Tech Stack as Gaming Pills */}
+              <div className="space-y-3">
+                <div className="flex items-center mb-3">
+                  <Code2 className="h-4 w-4 mr-2 text-yellow-300" />
+                  <span className="font-semibold">Tech Stack</span>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {exp.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill}
+                      className="relative px-3 py-1 bg-black/40 backdrop-blur-sm border border-white/30 rounded-full text-sm font-medium"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: skillIndex * 0.05 }}
+                      whileHover={{
+                        scale: 1.05,
+                        backgroundColor: "rgba(255,255,255,0.2)",
+                        borderColor: "rgba(255,255,255,0.6)",
+                      }}
+                    >
+                      {skill}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </Card>
           </motion.div>

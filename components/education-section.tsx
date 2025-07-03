@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { BookOpen, GraduationCap, Users } from "lucide-react"
 
 export default function EducationSection() {
@@ -66,7 +65,7 @@ export default function EducationSection() {
               <h3 className="text-xl font-bold pixel-text">Education</h3>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-6">
               <h4 className="font-bold">Rutgers University, New Brunswick - Honors College</h4>
               <p className="text-sm text-white/80">
                 B.S. in Computer Engineering, B.S. in Mathematics, Minor in Physics
@@ -76,12 +75,19 @@ export default function EducationSection() {
             </div>
 
             <div>
-              <h4 className="font-bold mb-2">Relevant Coursework</h4>
-              <div className="flex flex-wrap gap-2">
-                {courses.map((course) => (
-                  <Badge key={course} variant="outline" className="bg-black/30 border-white/30">
+              <h4 className="font-bold mb-3">Relevant Coursework</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {courses.map((course, index) => (
+                  <motion.div
+                    key={course}
+                    className="p-2 bg-black/30 backdrop-blur-sm border border-white/20 rounded text-xs text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.1)" }}
+                  >
                     {course}
-                  </Badge>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -101,26 +107,39 @@ export default function EducationSection() {
             </div>
 
             <div className="mb-6">
-              <h4 className="font-bold mb-2">Campus Organizations</h4>
-              <div className="flex flex-wrap gap-2">
-                {involvements.map((involvement) => (
-                  <Badge key={involvement} variant="outline" className="bg-black/30 border-white/30">
+              <h4 className="font-bold mb-3">Campus Organizations</h4>
+              <div className="space-y-2">
+                {involvements.map((involvement, index) => (
+                  <motion.div
+                    key={involvement}
+                    className="p-2 bg-black/30 backdrop-blur-sm border border-white/20 rounded text-sm"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.1)" }}
+                  >
                     {involvement}
-                  </Badge>
+                  </motion.div>
                 ))}
               </div>
             </div>
 
             <div>
-              <h4 className="font-bold mb-2">Leadership Roles</h4>
+              <h4 className="font-bold mb-3">Leadership Roles</h4>
               <div className="space-y-4">
                 {leadership.map((role, index) => (
-                  <div key={index} className="border-l-2 border-white/30 pl-4">
-                    <h5 className="font-bold">{role.title}</h5>
+                  <motion.div
+                    key={index}
+                    className="border-l-4 border-yellow-400 pl-4 bg-black/20 p-3 rounded-r-lg"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.2 }}
+                  >
+                    <h5 className="font-bold text-yellow-300">{role.title}</h5>
                     <p className="text-sm text-white/80">{role.organization}</p>
                     <p className="text-xs text-white/70">{role.period}</p>
-                    <p className="text-sm mt-1">{role.description}</p>
-                  </div>
+                    <p className="text-sm mt-2">{role.description}</p>
+                  </motion.div>
                 ))}
               </div>
             </div>

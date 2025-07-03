@@ -3,8 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Trophy, Zap } from "lucide-react"
+import { Trophy } from "lucide-react"
 
 export default function SkillsSection() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
@@ -12,21 +11,7 @@ export default function SkillsSection() {
   const skillCategories = [
     {
       name: "Programming Languages",
-      skills: [
-        "Python",
-        "C",
-        "C++",
-        "C#",
-        "Java",
-        "Go",
-        "R",
-        "SQL",
-        "JavaScript",
-        "TypeScript",
-        "HTML",
-        "CSS",
-        "MATLAB",
-      ],
+      skills: ["Python", "JavaScript", "TypeScript", "C++", "Go", "Java", "C#", "SQL", "R", "HTML", "CSS", "MATLAB"],
       color: "from-red-600 to-red-800",
       icon: "🧩",
     },
@@ -34,19 +19,16 @@ export default function SkillsSection() {
       name: "Frameworks & Libraries",
       skills: [
         "React",
-        "Node.js",
         "Next.js",
-        "Tailwind CSS",
-        "Flask",
-        "FastAPI",
-        "Django",
-        ".NET",
-        "PyTorch",
+        "Node.js",
         "TensorFlow",
-        "Scikit-Learn",
+        "PyTorch",
+        "Flask",
+        "Django",
         "Pandas",
         "NumPy",
-        "SciPy",
+        "Scikit-Learn",
+        "Tailwind CSS",
         "Matplotlib",
         "Streamlit",
         "BeautifulSoup",
@@ -56,37 +38,12 @@ export default function SkillsSection() {
       icon: "🛠️",
     },
     {
-      name: "DevOps, Databases & Cloud",
-      skills: [
-        "Git",
-        "GitHub",
-        "GitLab",
-        "Amazon Web Services",
-        "Google Cloud Platform",
-        "Azure DataBricks",
-        "Docker",
-        "MongoDB",
-        "PostgreSQL",
-      ],
+      name: "DevOps & Cloud",
+      skills: ["Git", "Docker", "AWS", "GCP", "PostgreSQL", "MongoDB", "GitHub", "GitLab"],
       color: "from-green-600 to-green-800",
       icon: "☁️",
     },
   ]
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  }
 
   return (
     <motion.div
@@ -99,47 +56,91 @@ export default function SkillsSection() {
         <Trophy className="inline-block mr-2" /> Skills & Abilities
       </h2>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
-        {skillCategories.map((category) => (
-          <motion.div key={category.name} variants={item}>
-            <Card
-              className={`p-6 h-full bg-gradient-to-br ${category.color} text-white border-2 border-white/20 game-card`}
-            >
-              <div className="flex items-center mb-4">
-                <span className="text-2xl mr-2">{category.icon}</span>
-                <h3 className="text-xl font-bold pixel-text">{category.name}</h3>
+      <div className="space-y-8">
+        {skillCategories.map((category, categoryIndex) => (
+          <motion.div
+            key={category.name}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Card className={`p-8 bg-gradient-to-br ${category.color} text-white border-2 border-white/20`}>
+              <div className="flex items-center mb-6">
+                <span className="text-3xl mr-4">{category.icon}</span>
+                <h3 className="text-2xl font-bold pixel-text">{category.name}</h3>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
+              {/* Hexagonal Grid Layout */}
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {category.skills.map((skill, index) => (
                   <motion.div
                     key={skill}
+                    className="relative group cursor-pointer"
                     onMouseEnter={() => setHoveredSkill(skill)}
                     onMouseLeave={() => setHoveredSkill(null)}
-                    whileHover={{ scale: 1.05 }}
+                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ delay: index * 0.05, type: "spring", stiffness: 200 }}
+                    whileHover={{ scale: 1.1, rotate: 5, y: -5 }}
                   >
-                    <Badge
-                      variant="outline"
-                      className={`bg-black/30 border-white/30 hover:border-white transition-all duration-300 ${
-                        hoveredSkill === skill ? "bg-white/20" : ""
-                      }`}
+                    {/* Hexagonal Skill Card */}
+                    <div
+                      className="relative w-20 h-20 bg-black/40 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center text-center p-2 transition-all duration-300"
+                      style={{
+                        clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                      }}
                     >
-                      {hoveredSkill === skill && <Zap className="h-3 w-3 mr-1 text-yellow-300" />}
-                      {skill}
-                    </Badge>
+                      <span className="text-xs font-bold leading-tight">{skill}</span>
+
+                      {/* Glow effect on hover */}
+                      {hoveredSkill === skill && (
+                        <motion.div
+                          className="absolute inset-0 bg-white/20 border-2 border-white/60"
+                          style={{
+                            clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                          }}
+                          animate={{
+                            scale: [1, 1.1, 1],
+                            opacity: [0.5, 0.8, 0.5],
+                          }}
+                          transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+                        />
+                      )}
+                    </div>
+
+                    {/* Floating particles on hover */}
+                    {hoveredSkill === skill && (
+                      <div className="absolute inset-0 pointer-events-none">
+                        {[...Array(3)].map((_, i) => (
+                          <motion.div
+                            key={i}
+                            className="absolute w-1 h-1 bg-yellow-300 rounded-full"
+                            style={{
+                              left: `${20 + i * 20}%`,
+                              top: `${30 + i * 15}%`,
+                            }}
+                            animate={{
+                              y: [-10, -30, -10],
+                              opacity: [0, 1, 0],
+                              scale: [0.5, 1, 0.5],
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: Number.POSITIVE_INFINITY,
+                              delay: i * 0.3,
+                            }}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
             </Card>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       <div className="mt-12 text-center">
         <motion.div

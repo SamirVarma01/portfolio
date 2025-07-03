@@ -1,8 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Code, ExternalLink, Github } from "lucide-react"
+import { Code, ExternalLink, Github, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ProjectsSection() {
@@ -13,15 +12,11 @@ export default function ProjectsSection() {
         "Developed a full-stack marketplace application for the game Team Fortress 2 to track prices of 3000+ in-game items over 3 years, storing pricing data in PostgreSQL and utilizing React (Next.js/Tailwind CSS) and TypeScript to create an interactive user interface",
       skills: [
         "Go",
-        "Gin",
-        "Fiber",
         "PostgreSQL",
-        "JavaScript",
-        "Next.js",
         "React",
-        "Recharts",
-        "Tailwind CSS",
+        "Next.js",
         "TypeScript",
+        "Tailwind CSS",
         "Python",
         "Selenium",
         "BeautifulSoup",
@@ -33,7 +28,7 @@ export default function ProjectsSection() {
       title: "NextLevel",
       description:
         "Launched a full-stack social media website for video game reviews, integrating the IGDB API to access data on 400,000+ games and growing a client base of 100+ users with a user authentication system created in Node.js, used MongoDB for scalable data storage",
-      skills: ["JavaScript", "Node.js", "Next.js", "React", "TypeScript", "MongoDB", "Tailwind CSS", "AWS Lambda"],
+      skills: ["Node.js", "MongoDB", "React", "TypeScript", "AWS Lambda", "Next.js", "Tailwind CSS"],
       color: "from-green-600 to-green-800",
       icon: "🎯",
     },
@@ -41,7 +36,7 @@ export default function ProjectsSection() {
       title: "Game-Theoretic Pokémon Battle Bot",
       description:
         "Developed a game theory-based AI agent for Pokémon Showdown using Nash equilibria to compete online against human opponents, peaking in the top 150 players worldwide, used C++ with pybind11 to complete probability calculations and C# to visualize statistics",
-      skills: ["C++", "C#", "Python", "Scikit-Learn", "NumPy", "WebSockets API"],
+      skills: ["C++", "Python", "C#", "NumPy", "Scikit-Learn", "WebSockets API"],
       color: "from-red-600 to-red-800",
       icon: "⚡",
     },
@@ -90,19 +85,33 @@ export default function ProjectsSection() {
               </div>
 
               <h3 className="text-xl font-bold mb-2 pixel-text">{project.title}</h3>
-              <p className="mb-4 text-sm">{project.description}</p>
+              <p className="mb-6 text-sm">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.skills.slice(0, 5).map((skill) => (
-                  <Badge key={skill} variant="outline" className="bg-black/30 border-white/30">
-                    {skill}
-                  </Badge>
-                ))}
-                {project.skills.length > 5 && (
-                  <Badge variant="outline" className="bg-black/30 border-white/30">
-                    +{project.skills.length - 5} more
-                  </Badge>
-                )}
+              {/* Tech Stack as Stacked Chips */}
+              <div className="mb-6">
+                <h4 className="font-semibold mb-3 flex items-center">
+                  <Wrench className="h-4 w-4 mr-2" />
+                  Built With
+                </h4>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill}
+                      className="px-3 py-1 bg-white/20 backdrop-blur-sm border border-white/40 rounded-lg text-xs font-semibold"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: skillIndex * 0.05 }}
+                      whileHover={{
+                        scale: 1.05,
+                        backgroundColor: "rgba(255,255,255,0.3)",
+                        y: -2,
+                      }}
+                    >
+                      {skill}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               <div className="flex space-x-2 mt-auto">

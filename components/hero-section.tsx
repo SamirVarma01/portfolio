@@ -35,7 +35,7 @@ export default function HeroSection() {
           <div className="w-32 h-32 md:w-40 md:h-40 mx-auto relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 animate-pulse"></div>
             <Image
-              src="/placeholder.svg?height=160&width=160"
+              src="/myphoto.png?height=160&width=160"
               alt="Samir Varma"
               width={160}
               height={160}
@@ -81,18 +81,24 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Button variant="outline" size="lg" className="gap-2 pixel-borders">
-              <Mail className="h-4 w-4" />
-              sv773@scarletmail.rutgers.edu
-            </Button>
-            <Button variant="outline" size="lg" className="gap-2 pixel-borders">
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
-            </Button>
-            <Button variant="outline" size="lg" className="gap-2 pixel-borders">
-              <Github className="h-4 w-4" />
-              GitHub
-            </Button>
+            <a href="mailto:sv773@scarletmail.rutgers.edu" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="gap-2 pixel-borders">
+                <Mail className="h-4 w-4" />
+                sv773@scarletmail.rutgers.edu
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/samir-varma-1a1166281/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="gap-2 pixel-borders">
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </Button>
+            </a>
+            <a href="https://github.com/SamirVarma01" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="gap-2 pixel-borders">
+                <Github className="h-4 w-4" />
+                GitHub
+              </Button>
+            </a>
           </motion.div>
         )}
       </div>
