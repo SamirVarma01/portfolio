@@ -46,8 +46,9 @@ export default function ProjectsSection() {
         { name: "C++", icon: "⚡", tier: "language" },
         { name: "Python", icon: "🐍", tier: "language" },
         { name: "C#", icon: "🔷", tier: "language" },
+        { name: "Scikit-Learn", icon: "🔢", tier: "machine learning" },
+        { name: "WebSockets", icon: "🔌", tier: "networking" }
         { name: "NumPy", icon: "🔢", tier: "math" },
-        { name: "WebSockets", icon: "🔌", tier: "networking" },
       ],
       color: "from-red-600 to-red-800",
       icon: "⚡",
