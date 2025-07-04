@@ -74,9 +74,9 @@ export default function ProjectsSection() {
       case "math":
         return "from-teal-400 to-cyan-500"
       case "networking":
-        return "from-gray-400 to-slate-500"
+        return "from-black-400 to-grey-500"
       default:
-        return "from-gray-400 to-gray-600"
+        return "from-blue-400 to-cyan-600"
     }
   }
 
