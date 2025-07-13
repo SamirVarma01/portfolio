@@ -101,7 +101,7 @@ export default function HeroSection() {
             </a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="gap-2 pixel-borders">
-                <FileText className="h-4 w-4" /> */
+                <FileText className="h-4 w-4" />
                 Resume
               </Button>
             </a>

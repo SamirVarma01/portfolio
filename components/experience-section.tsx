@@ -11,7 +11,7 @@ export default function ExperienceSection() {
       location: "Middletown, NJ",
       period: "June 2025 – Present",
       description:
-        "Building supervised and reinforcement learning models for threat analytics to detect anomalies in network traffic",
+        "At AT&T, I contributed to the development of data-driven solutions aimed at identifying and mitigating network threats. My work focused on improving the accuracy of threat detection systems by refining machine learning models and streamlining their performance. Additionally, I led a team of five engineers in the Intern Innovation Challenge at AT&T, where I helped in the development of Paladin, a full-stack git-like application that helps monitor and automatically rollback malicious changes to secure project files.",
       skills: [
         "Python",
         "TensorFlow",
@@ -32,7 +32,7 @@ export default function ExperienceSection() {
       location: "San Francisco, CA",
       period: "Jan. 2025 – Apr. 2025",
       description:
-        "Collaborated with ex-Google DeepMind engineers to develop and optimize convolutional neural network models for automating several image editing tasks, such as large object removal, facial expression altering, and red-eye removal, reducing error rates by 25%",
+        "During my time at a stealth-mode startup, I worked alongside engineers from Google DeepMind to build and refine deep learning models for complex image editing tasks. I played a key role in developing automated solutions for challenges like object removal and facial feature adjustments, with a focus on improving model reliability and visual accuracy. To support scalable deployment, I helped streamline the machine learning pipeline by containerizing workflows and designing systems for efficient image data ingestion and preprocessing.",
       skills: ["Python", "PyTorch", "OpenCV", "Flask", "BeautifulSoup", "Docker", "Git", "Google Cloud Platform"],
       color: "from-purple-600 to-purple-800",
     },
@@ -42,7 +42,7 @@ export default function ExperienceSection() {
       location: "Piscataway, NJ",
       period: "June 2024 – Apr. 2025",
       description:
-        "Integrated a multi-agent reinforcement learning algorithm into the CARLA autonomous driving simulator to enhance real-time decision-making capabilities for autonomous vehicles using Actor-Critic neural networks implemented in TensorFlow",
+        "At CyberPhysical Intelligence Lab at Rutgers, I focused on advancing autonomous vehicle decision-making by integrating multi-agent reinforcement learning algorithms into a high-fidelity driving simulator. My work involved implementing and fine-tuning neural network architectures to enable more adaptive and efficient control strategies. I also led a series of experimental comparisons between different reinforcement learning approaches, contributing to more computationally efficient training pipelines and deeper insights into their performance trade-offs.",
       skills: ["Python", "TensorFlow", "TensorBoard", "Pandas", "Matplotlib", "Git", "Linux"],
       color: "from-red-600 to-red-800",
     },
@@ -52,7 +52,7 @@ export default function ExperienceSection() {
       location: "Tempe, AZ",
       period: "May 2024 - Aug. 2024",
       description:
-        "Utilized SQL to query dataset of 300+ lunar rover components, improving power efficiency by 44% and reducing costs by 32%",
+        "As a data analyst in NASA’s L’SPACE Mission Concept Academy, I worked on optimizing lunar rover subsystem designs by conducting data-driven analyses of component performance and cost-efficiency. Using structured queries and interactive dashboards, I identified opportunities for energy savings and cost reduction while also visualizing key financial and operational metrics to support decision-making across the mission planning process.",
       skills: ["SQL", "Google BigQuery", "Power BI"],
       color: "from-indigo-600 to-indigo-800",
     },
