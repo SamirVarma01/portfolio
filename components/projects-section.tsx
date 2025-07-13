@@ -19,6 +19,8 @@ export default function ProjectsSection() {
         { name: "Next.js", icon: "▲", tier: "frontend" },
       ],
       color: "from-green-600 to-green-800",
+      github: "https://github.com/SamirVarma01/NextLevel",
+      demo: "https://next-level-eight-zeta.vercel.app/"
     },
     {
       title: "TF-Trades",
@@ -35,6 +37,8 @@ export default function ProjectsSection() {
         { name: "Selenium", icon: "🤖", tier: "automation" },
       ],
       color: "from-orange-600 to-orange-800",
+      github: "https://github.com/SamirVarma01/TF-Trades",
+      demo: "https://tf-trades.vercel.app/"
     },
     {
       title: "Game-Theoretic Pokémon Battle Bot",
@@ -49,6 +53,7 @@ export default function ProjectsSection() {
         { name: "NumPy", icon: "🔢", tier: "math" },
       ],
       color: "from-purple-600 to-purple-800",
+      github: "https://github.com/SamirVarma01/Game-Theory-in-Pokemon",
     },
   ]
 
@@ -155,14 +160,30 @@ export default function ProjectsSection() {
               </div>
 
               <div className="flex space-x-2 mt-auto">
-                <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/30">
-                  <Github className="h-4 w-4 mr-1" />
-                  Code
-                </Button>
-                <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/30">
-                  <ExternalLink className="h-4 w-4 mr-1" />
-                  Demo
-                </Button>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/30">
+                    <Github className="h-4 w-4 mr-1" />
+                    Code
+                  </Button>
+                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/30">
+                      <ExternalLink className="h-4 w-4 mr-1" />
+                      Demo
+                    </Button>
+                  </a>
+                )}
               </div>
             </Card>
           </motion.div>
