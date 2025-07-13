@@ -96,9 +96,6 @@ export default function ExperienceSection() {
             <Card
               className={`p-6 bg-gradient-to-br ${exp.color} text-white border-2 border-white/20 game-card overflow-hidden relative`}
             >
-              <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-bl-full flex items-start justify-end p-2">
-                <span className="text-2xl">{exp.icon}</span>
-              </div>
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <div>

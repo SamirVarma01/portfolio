@@ -19,7 +19,6 @@ export default function ProjectsSection() {
         { name: "Next.js", icon: "▲", tier: "frontend" },
       ],
       color: "from-green-600 to-green-800",
-      icon: "🎯",
     },
     {
       title: "TF-Trades",
@@ -36,7 +35,6 @@ export default function ProjectsSection() {
         { name: "Selenium", icon: "🤖", tier: "automation" },
       ],
       color: "from-orange-600 to-orange-800",
-      icon: "🎮",
     },
     {
       title: "Game-Theoretic Pokémon Battle Bot",
@@ -51,7 +49,6 @@ export default function ProjectsSection() {
         { name: "NumPy", icon: "🔢", tier: "math" },
       ],
       color: "from-purple-600 to-purple-800",
-      icon: "⚡",
     },
   ]
 
@@ -118,9 +115,6 @@ export default function ProjectsSection() {
             <Card
               className={`p-6 h-full bg-gradient-to-br ${project.color} text-white border-2 border-white/20 game-card overflow-hidden relative`}
             >
-              <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-bl-full flex items-start justify-end p-2">
-                <span className="text-2xl">{project.icon}</span>
-              </div>
 
               <h3 className="text-xl font-bold mb-2 pixel-text">{project.title}</h3>
               <p className="mb-6 text-sm">{project.description}</p>
