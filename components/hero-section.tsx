@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, FileText } from "lucide-react"
 import Image from "next/image"
 
 export default function HeroSection() {
@@ -97,6 +97,12 @@ export default function HeroSection() {
               <Button variant="outline" size="lg" className="gap-2 pixel-borders">
                 <Github className="h-4 w-4" />
                 GitHub
+              </Button>
+            </a>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" className="gap-2 pixel-borders">
+                <FileText className="h-4 w-4" /> */
+                Resume
               </Button>
             </a>
           </motion.div>
