@@ -203,8 +203,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-bold">LinkedIn</h4>
-                  <a href="#" className="text-white/80 hover:text-white underline">
-                    linkedin.com/in/samir-varma
+                  <a href="https://www.linkedin.com/in/samir-varma-1a1166281/" className="text-white/80 hover:text-white underline">
+                    https://www.linkedin.com/in/samir-varma-1a1166281/
                   </a>
                 </div>
               </div>
@@ -215,8 +215,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-bold">GitHub</h4>
-                  <a href="#" className="text-white/80 hover:text-white underline">
-                    github.com/samir-varma
+                  <a href="https://github.com/SamirVarma01" className="text-white/80 hover:text-white underline">
+                    https://github.com/SamirVarma01
                   </a>
                 </div>
               </div>
