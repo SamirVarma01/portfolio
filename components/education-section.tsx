@@ -14,6 +14,8 @@ export default function EducationSection() {
     "Multivariable Calculus",
     "Differential Equations",
     "Probability and Random Processes",
+    "Machine Learning",
+    "Mathematical Reasoning"
   ]
 
   const involvements = [

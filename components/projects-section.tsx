@@ -7,9 +7,24 @@ import { Button } from "@/components/ui/button"
 export default function ProjectsSection() {
   const projects = [
     {
+      title: "NextLevel",
+      description:
+        "I created a social platform focused on video game reviews, offering users the ability to browse, post, and engage with content tied to a vast catalog of titles. The site featured account management, interactive feedback systems, and automatic image processing to enhance user experience. By connecting to a major gaming database, I ensured comprehensive game coverage while building a scalable infrastructure to support a growing community. The site currently has over 100 users and counting!",
+      skills: [
+        { name: "Node.js", icon: "🟢", tier: "backend" },
+        { name: "MongoDB", icon: "🍃", tier: "database" },
+        { name: "React", icon: "⚛️", tier: "frontend" },
+        { name: "TypeScript", icon: "📘", tier: "language" },
+        { name: "AWS Lambda", icon: "☁️", tier: "cloud" },
+        { name: "Next.js", icon: "▲", tier: "frontend" },
+      ],
+      color: "from-green-600 to-green-800",
+      icon: "🎯",
+    },
+    {
       title: "TF-Trades",
       description:
-        "Developed a full-stack marketplace application for the game Team Fortress 2 to track prices of 3000+ in-game items over 3 years, storing pricing data in PostgreSQL and utilizing React (Next.js/Tailwind CSS) and TypeScript to create an interactive user interface",
+        "I built a dynamic marketplace platform centered around Team Fortress 2’s in-game economy, combining automated trade tracking with a user-friendly interface. The project involved integrating data from multiple trading platforms and adapting a custom bot to identify and execute profitable item swaps in real time. Alongside backend data handling, I designed the frontend to make historical pricing trends easily accessible, enabling users to explore long-term market behavior and uncover trading insights.",
       skills: [
         { name: "Go", icon: "🐹", tier: "backend" },
         { name: "PostgreSQL", icon: "🐘", tier: "database" },
@@ -24,24 +39,9 @@ export default function ProjectsSection() {
       icon: "🎮",
     },
     {
-      title: "NextLevel",
-      description:
-        "Launched a full-stack social media website for video game reviews, integrating the IGDB API to access data on 400,000+ games and growing a client base of 100+ users with a user authentication system created in Node.js, used MongoDB for scalable data storage",
-      skills: [
-        { name: "Node.js", icon: "🟢", tier: "backend" },
-        { name: "MongoDB", icon: "🍃", tier: "database" },
-        { name: "React", icon: "⚛️", tier: "frontend" },
-        { name: "TypeScript", icon: "📘", tier: "language" },
-        { name: "AWS Lambda", icon: "☁️", tier: "cloud" },
-        { name: "Next.js", icon: "▲", tier: "frontend" },
-      ],
-      color: "from-green-600 to-green-800",
-      icon: "🎯",
-    },
-    {
       title: "Game-Theoretic Pokémon Battle Bot",
       description:
-        "Developed a game theory-based AI agent for Pokémon Showdown using Nash equilibria to compete online against human opponents, peaking in the top 150 players worldwide, used C++ with pybind11 to complete probability calculations and C# to visualize statistics",
+        "I built an AI agent that applies game theory to real-time Pokémon battles, using strategic decision-making to compete effectively against human players on an online platform. The bot combined probabilistic modeling with battle state analysis to evaluate possible moves and select optimal actions under uncertainty. To support this, I created a companion tool that visualized key performance metrics and helped refine the bot’s behavior over time.",
       skills: [
         { name: "C++", icon: "⚡", tier: "language" },
         { name: "Python", icon: "🐍", tier: "language" },

@@ -102,7 +102,7 @@ export default function Home() {
                   Hi! I'm Samir, a rising junior at the Rutgers University Honors College studying Computer Engineering and Mathematics with a Physics minor. 
                   I'm enthralled by the integration of machine learning in all kinds of technologies, ranging from full-stack applications to video game bots and self-driving cars! 
                   Beyond my technical interests, my hobbies include playing guitar, watching anime, going to the gym, and playing video games. 
-                  In my free time, you can probably find me rambling on about Satoru Gojo, grinding Pokemon Showdown, or playing Resident Evil.
+                  In my free time, you can probably find me rambling on about Satoru Gojo, grinding Pokemon Showdown, or playing Doom.
                 </p>
               </Card>
 
