@@ -50,7 +50,7 @@ export default function ProjectsSection() {
         { name: "WebSockets", icon: "🔌", tier: "networking" },
         { name: "NumPy", icon: "🔢", tier: "math" },
       ],
-      color: "from-red-600 to-red-800",
+      color: "from-purple-600 to-purple-800",
       icon: "⚡",
     },
   ]
