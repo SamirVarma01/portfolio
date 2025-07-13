@@ -55,6 +55,21 @@ export default function ProjectsSection() {
       color: "from-purple-600 to-purple-800",
       github: "https://github.com/SamirVarma01/Game-Theory-in-Pokemon",
     },
+    {
+      title: "Mortal KomBot",
+      description:
+        "I designed an AI agent capable of learning to play Mortal Kombat through reinforcement learning, training it to make tactical decisions in both aggressive and defensive gameplay scenarios. By experimenting with different learning strategies for discrete and continuous actions, I was able to guide the agent toward more nuanced combat behavior. Through iterative training and reward tuning, the agent steadily improved and became highly competitive against in-game opponents.",
+      skills: [
+        { name: "Python", icon: "🐍", tier: "language" },
+        { name: "PyTorch", icon: "🔥", tier: "machine learning" },
+        { name: "Stable-Baselines3", icon: "🤖", tier: "machine learning" },
+        { name: "NumPy", icon: "🔢", tier: "math" },
+        { name: "Matplotlib", icon: "📊", tier: "math" },
+        { name: "OpenAI Gym", icon: "🏋️", tier: "machine learning" },
+      ],
+      color: "from-yellow-600 to-yellow-800",
+      github: "https://github.com/SamirVarma01/Mortal-KomBot", // placeholder link
+    },
   ]
 
   const getTierColor = (tier: string) => {
@@ -109,14 +124,14 @@ export default function ProjectsSection() {
       </h2>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="flex overflow-x-auto space-x-6 pb-4"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
         {projects.map((project, index) => (
-          <motion.div key={index} variants={item}>
+          <motion.div key={index} variants={item} className="min-w-[350px] max-w-xs flex-shrink-0">
             <Card
               className={`p-6 h-full bg-gradient-to-br ${project.color} text-white border-2 border-white/20 game-card overflow-hidden relative`}
             >
