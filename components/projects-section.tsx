@@ -38,7 +38,6 @@ export default function ProjectsSection() {
       ],
       color: "from-orange-600 to-orange-800",
       github: "https://github.com/SamirVarma01/TF-Trades",
-      demo: "https://tf-trades.vercel.app/"
     },
     {
       title: "Game-Theoretic Pokémon Battle Bot",
