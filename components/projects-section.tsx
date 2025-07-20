@@ -23,6 +23,21 @@ export default function ProjectsSection() {
       demo: "https://next-level-eight-zeta.vercel.app/"
     },
     {
+      title: "Paladin",
+      description:
+        "(Created as part of AT&T internship, unable to open-source code) Paladin is a security-focused alert system designed to monitor and protect IoT infrastructure at large-scale events. Built during AT&T’s TDP Intern Innovation Challenge, the platform detects unauthorized changes to critical system files on connected devices—such as executables and configurations—and rolls them back automatically to minimize risk. By integrating with AT&T’s Dynamic Defense framework, it also monitors for suspicious network activity, offering a comprehensive defense against cyber threats. I led the project as both the primary backend developer and team manager, collaborating closely with four engineers to bring the system to life.",
+      skills: [
+        { name: "Flask", icon: "⚗️", tier: "backend" },
+        { name: "MySQL", icon: "🐬", tier: "database" },
+        { name: "Git", icon: "🐙", tier: "tool" },
+        { name: "Watchdog", icon: "👀", tier: "tool" },
+        { name: "React", icon: "⚛️", tier: "frontend" },
+        { name: "Tailwind CSS", icon: "🎨", tier: "styling" },
+        { name: "Next.js", icon: "▲", tier: "frontend" },
+      ],
+      color: "from-blue-600 to-blue-800",
+    },
+    {
       title: "TF-Trades",
       description:
         "I built a dynamic marketplace platform centered around Team Fortress 2’s in-game economy, combining automated trade tracking with a user-friendly interface. The project involved integrating data from multiple trading platforms and adapting a custom bot to identify and execute profitable item swaps in real time. Alongside backend data handling, I designed the frontend to make historical pricing trends easily accessible, enabling users to explore long-term market behavior and uncover trading insights.",
@@ -174,17 +189,19 @@ export default function ProjectsSection() {
               </div>
 
               <div className="flex space-x-2 mt-auto">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/30">
-                    <Github className="h-4 w-4 mr-1" />
-                    Code
-                  </Button>
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="outline" size="sm" className="bg-white/10 hover:bg-white/20 border-white/30">
+                      <Github className="h-4 w-4 mr-1" />
+                      Code
+                    </Button>
+                  </a>
+                )}
                 {project.demo && (
                   <a
                     href={project.demo}
