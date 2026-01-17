@@ -101,8 +101,8 @@ export default function Home() {
                 <p className="mb-4">
                   Hi! I'm Samir, a junior at the Rutgers University Honors College studying Computer Engineering and Mathematics with a Physics minor. 
                   I'm enthralled by the integration of machine learning in all kinds of technologies, ranging from full-stack applications to video game bots and self-driving cars! 
-                  Beyond my technical interests, my hobbies include playing guitar, watching anime, going to the gym, and playing video games. 
-                  In my free time, you can probably find me rambling on about Satoru Gojo, grinding Pokemon Showdown, or playing Doom.
+                  Beyond my technical interests, my hobbies include playing guitar, watching soccer/anime, going to the gym, and playing video games. 
+                  In my free time, you can probably find me rambling on about Satoru Gojo, grinding Pokemon Showdown, or watching Liverpool highlights.
                 </p>
               </Card>
 
@@ -127,7 +127,7 @@ export default function Home() {
                   </li>
                   <li className="flex justify-between">
                     <span>GPA:</span>
-                    <span>3.956/4.000</span>
+                    <span>3.967/4.000</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Start Date:</span>
