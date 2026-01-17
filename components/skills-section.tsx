@@ -39,7 +39,7 @@ export default function SkillsSection() {
     },
     {
       name: "DevOps & Cloud",
-      skills: ["Git", "Docker", "AWS", "GCP", "PostgreSQL", "MongoDB", "GitHub", "GitLab"],
+      skills: ["Git", "Docker", "AWS", "GCP", "PostgreSQL", "MongoDB", "GitHub", "GitLab", "MLflow", "Apache Airflow"],
       color: "from-green-600 to-green-800",
       icon: "☁️",
     },

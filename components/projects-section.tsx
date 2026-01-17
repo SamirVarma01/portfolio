@@ -7,6 +7,21 @@ import { Button } from "@/components/ui/button"
 export default function ProjectsSection() {
   const projects = [
     {
+      title: "NexusML",
+      description:
+        "NexusML is a two-plane ML infrastructure platform that combines Git-integrated model versioning with cloud storage (S3/GCS) and a high-performance inference stack featuring a Go proxy with dynamic request batching and a Python FastAPI model server. This setup allows data scientists to seamlessly track, deploy, and serve machine learning models in production environments. By leveraging Git for version control, NexusML ensures reproducibility and collaboration, while the cloud storage integration provides scalable and reliable data management. The inference stack is optimized for low-latency predictions, making it suitable for real-time applications.",
+      skills: [
+        { name: "Go", icon: "🐹", tier: "language" },
+        { name: "Python", icon: "🐍", tier: "language" },
+        { name: "Docker", icon: "🐳", tier: "containerization" },
+        { name: "AWS S3", icon: "☁️", tier: "cloud" },
+        { name: "GCP", icon: "☁️", tier: "cloud" },
+        { name: "FastAPI", icon: "🟢", tier: "backend" },
+      ],
+      color: "from-red-600 to-red-800",
+      github: "https://github.com/SamirVarma01/NexusML",
+    },
+    {
       title: "NextLevel",
       description:
         "I created a social platform focused on video game reviews, offering users the ability to browse, post, and engage with content tied to a vast catalog of titles. The site featured account management, interactive feedback systems, and automatic image processing to enhance user experience. By connecting to a major gaming database, I ensured comprehensive game coverage while building a scalable infrastructure to support a growing community. The site currently has over 100 users and counting!",
